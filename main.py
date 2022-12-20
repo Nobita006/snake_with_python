@@ -1,6 +1,9 @@
 import pygame
 import random
 import sys
+
+import asyncio
+
 sys.path.insert(0, 'Classes')
 from HeadClass import *
 from TailClass import *
