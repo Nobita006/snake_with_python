@@ -29,8 +29,6 @@ tailsY = [] # the y pos of the tail pieces
 # Other Variables
 tailNum = int()
 score = 0
-highScoreFile = open("HighScore.txt", "r")
-highScore = highScoreFile.readline(1)
 
 # Initalize Pygame
 pygame.init()
@@ -46,7 +44,6 @@ clock = pygame.time.Clock()
 # Font/Text Setup
 scoreFont = pygame.font.SysFont("Halvetica", 20)
 scoreText = scoreFont.render("Score: {0}".format(score), False, (WHITE))
-highScoreText = scoreFont.render("High Score: {0}".format(highScore), False, (WHITE))
 
 #~~~~~~~ Sprites Init ~~~~~~~#
 # Sprite Groups
@@ -135,16 +132,11 @@ while (running):
     allSprites.draw(screen) # Draws the head
     tailPieces.draw(screen) # Draws the blocks
     screen.blit(scoreText, (10, 10))
-    # screen.blit(highScoreText, (10, 30))
 
     # Show Frame
     pygame.display.flip() # Flips the display to show new frame
 
 # Quit out of pygame
-highScoreFile.close()
 pygame.quit()
 pygame.font.quit()
 
-if (score > highScore):
-    highScoreFile = open("HighScore.txt", "w+")
-    highScoreFile.write(str(highScore))
