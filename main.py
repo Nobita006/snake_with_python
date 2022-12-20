@@ -17,7 +17,6 @@ FPS = 10 # frames per second
 # Define The Colors
 BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
-BLUE = (0, 0, 255)
 
 # Global Variables
 global tailSize, spawnFood, tailsX, tailsY

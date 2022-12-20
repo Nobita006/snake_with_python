@@ -1,12 +1,12 @@
 import pygame
-BLUE = (0, 0, 255)
+RED = (255, 0, 0)
 
 class Head(pygame.sprite.Sprite):
     def __init__(self, WIDTH, HEIGHT):
         pygame.sprite.Sprite.__init__(self)
         # Head Setup
         self.image = pygame.Surface((15, 15)) # Create head with 15 width and height
-        self.image.fill(BLUE) # Make it blue
+        self.image.fill(RED) # Make it red
         self.rect = self.image.get_rect() # Set the rect to the image rect
         self.rect.center = ((WIDTH / 2, HEIGHT / 2)) #set starting location to middle of the screen
         # Self Variable Setup
